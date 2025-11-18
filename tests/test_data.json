@@ -13,11 +13,11 @@
         "timeline_url": "https://example.com/timeline/1",
         "events": [
             {
-                "event_type": "comment",
+                "event_type": "commented",
                 "author": "carol",
                 "event_date": "2020-01-02T10:00:00Z",
                 "label": "bug",
-                "comment": "hi",
+                "comment": "hi"
             }
         ]
     }
