@@ -1,0 +1,102 @@
+...........Loaded 1 issues from tests/test_data.json.
+.....E...Analyzing trends for the top 2 labels: {'bug', 'feature'}
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issues_category_trend_analyzer.py:47: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+  pd.Grouper(freq='Q'),
+..Analyzing trends for the top 0 labels: set()
+.Analyzing trends for the top 2 labels: {'bug', 'feature'}
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issues_category_trend_analyzer.py:47: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+  pd.Grouper(freq='Q'),
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/project-application-template/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py:1567: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
+  ax.set_xlim(left, right)
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/project-application-template/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py:1567: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
+  ax.set_xlim(left, right)
+.....Loaded 661 issues from data/poetry_issues.json.
+Running Trend Analysis...
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/trend_analyzer.py:23: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df["month"] = df["created_date"].dt.to_period("M")
+....usage: run.py [-h] --feature FEATURE [--user USER] [--label LABEL]
+run.py: error: the following arguments are required: --feature/-f
+../Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/trend_analyzer.py:23: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df["month"] = df["created_date"].dt.to_period("M")
+....E
+======================================================================
+ERROR: test_empty_inputs_do_not_crash (test_issue_resolution_time_analyzer.TestIssueResolutionTimeAnalyzer.test_empty_inputs_do_not_crash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/tests/test_issue_resolution_time_analyzer.py", line 122, in test_empty_inputs_do_not_crash
+    self.an.plot_label_frequency(Counter())
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issue_resolution_time_analyzer.py", line 63, in plot_label_frequency
+    labels, counts = zip(*most_common_labels)
+    ^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+
+======================================================================
+ERROR: test_run_without_comments_raises_due_to_zero_total (test_user_analysis_feature.TestCommentAnalysis.test_run_without_comments_raises_due_to_zero_total)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rozannedezoysa/anaconda3/lib/python3.11/unittest/mock.py", line 1378, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/tests/test_user_analysis_feature.py", line 44, in test_run_without_comments_raises_due_to_zero_total
+    CommentAnalysis().run()
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/userAnalysis_Feature.py", line 45, in run
+    percentage = (value / total_values) * 100
+                  ~~~~~~^~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.453s
+
+FAILED (errors=2)
+(.venv) (base) rozannedezoysa@Rozannes-MacBook-Pro-96 group7-project-application-template-testing % python -m coverage run --source=. -m unittest discover -s tests -p "test_*.py"
+...........Loaded 1 issues from tests/test_data.json.
+.....E...Analyzing trends for the top 2 labels: {'bug', 'feature'}
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issues_category_trend_analyzer.py:47: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+  pd.Grouper(freq='Q'),
+..Analyzing trends for the top 0 labels: set()
+.Analyzing trends for the top 2 labels: {'bug', 'feature'}
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issues_category_trend_analyzer.py:47: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+  pd.Grouper(freq='Q'),
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/project-application-template/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py:1567: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
+  ax.set_xlim(left, right)
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/project-application-template/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py:1567: UserWarning: Attempting to set identical low and high xlims makes transformation singular; automatically expanding.
+  ax.set_xlim(left, right)
+.....Loaded 661 issues from data/poetry_issues.json.
+Running Trend Analysis...
+/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/trend_analyzer.py:23: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df["month"] = df["created_date"].dt.to_period("M")
+....usage: run.py [-h] --feature FEATURE [--user USER]
+              [--label LABEL]
+run.py: error: the following arguments are required: --feature/-f
+../Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/trend_analyzer.py:23: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  df["month"] = df["created_date"].dt.to_period("M")
+....E
+======================================================================
+ERROR: test_empty_inputs_do_not_crash (test_issue_resolution_time_analyzer.TestIssueResolutionTimeAnalyzer.test_empty_inputs_do_not_crash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/tests/test_issue_resolution_time_analyzer.py", line 122, in test_empty_inputs_do_not_crash
+    self.an.plot_label_frequency(Counter())
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/issue_resolution_time_analyzer.py", line 63, in plot_label_frequency
+    labels, counts = zip(*most_common_labels)
+    ^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+
+======================================================================
+ERROR: test_run_without_comments_raises_due_to_zero_total (test_user_analysis_feature.TestCommentAnalysis.test_run_without_comments_raises_due_to_zero_total)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rozannedezoysa/anaconda3/lib/python3.11/unittest/mock.py", line 1378, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/tests/test_user_analysis_feature.py", line 44, in test_run_without_comments_raises_due_to_zero_total
+    CommentAnalysis().run()
+  File "/Users/rozannedezoysa/Desktop/UMD/Fall 2025/Software Engineering/Repos/group7-project-application-template-testing/analysis/userAnalysis_Feature.py", line 45, in run
+    percentage = (value / total_values) * 100
+                  ~~~~~~^~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.216s
+
+FAILED (errors=2)
