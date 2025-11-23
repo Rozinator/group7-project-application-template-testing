@@ -3,12 +3,12 @@ Name                                         Stmts   Miss  Cover
 analysis/__init__.py                             0      0   100%
 analysis/issue_resolution_time_analyzer.py      72      5    93%
 analysis/issues_category_trend_analyzer.py      38      0   100%
-analysis/trend_analyzer.py                      22     18    18%
+analysis/trend_analyzer.py                      22      0   100%
 analysis/userAnalysis_Feature.py                46      0   100%
 config.py                                       68      5    93%
 data_loader.py                                  18      1    94%
-example_analysis.py                             28     17    39%
+example_analysis.py                             28     16    43%
 model.py                                        63      0   100%
-run.py                                          33      7    79%
+run.py                                          33      0   100%
 ----------------------------------------------------------------
-TOTAL                                          388     53    86%
+TOTAL                                          388     27    93%
